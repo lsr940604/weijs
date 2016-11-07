@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="box"></div>
+
+<script type="text/template" id="template">
+    <ul>
+        <% _.each(list,function(item,index){ %>
+            <li> 我叫 <span> <%=item.name%> </span>,今年 <span> <%=item.age%>  </span> 岁。 </li>
+        <% }); %>
+    </ul>
+</script>
+<script src="../lib/underscore/underscore-min.js"></script>
+<script>
+    /*准备数据*/
+    var data = [
+        {name:'xzz',age:'18'},
+        {name:'xgg',age:'17'}
+    ]
+    /*准备模版*/
+
+    /*数据转化成html*/
+    /*1.怎么样使用underscore*/
+    /* JQUERY $.each();  underscore _.each() */
+    /*2.怎么样使用template*/
+    /*1.获取模版内容*/
+    var templateHtml =  document.querySelector('#template').innerHTML;
+    /*2.模版转化成模版函数*/
+    var templateFuc = _.template(templateHtml);
+    /*3.传入数据转化成html结构的字符*/
+    var html = templateFuc({list:data});
+
+    /*简单的写*/
+    /*var html = _.template(document.querySelector('#tempalte').innerHTML)({list:data});*/
+
+    /*渲染到html页面当中*/
+    document.querySelector('#box').innerHTML = html;
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!--html5骨架-->
+<!DOCTYPE html>
+<!--试用的语言是中文简体-->
+<html lang="zh-cn">
+<head>
+    <!--网页字符编码-->
+    <meta charset="utf-8">
+    <!--如果试用的时候IE浏览器 会试用最新的版本来渲染当前的页面-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--视口  和设备宽度一样  默认缩放比是1.0 不允许用户自行缩放  pc不认识-->
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>Template</title>
+
+    <!-- Bootstrap 核心css文件-->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css"/>
+
+    <!--
+    1.html5shiv  处理html5标签不兼容
+    2.respond    处理媒体查询不兼容的问题
+    注意：respond在file下是不工作的  要求在http服务下面
+    -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--条件注释  lt  gt lte gte-->
+    <!--[if lt IE 9]>
+    <script src="../lib/html5shiv/html5shiv.min.js"></script>
+    <script src="../lib/respond/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--
+role="navigation"
+aria-expanded="false"
+class="sr-only"  screen read only
+像这样的属性是提供个屏幕阅读器用的  比如盲人
+-->
+
+<!--class="navbar navbar-default"  首先是导航条  默认样式的导航条-->
+<nav class="navbar navbar-default" role="navigation">
+    <!--响应式容器-->
+    <div class="container">
+        <!--商标区块和切换按钮最好移动端展示-->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <!--切换按钮-->
+            <!--
+                class="navbar-toggle collapsed"  是一个导航切换按钮  collapsed 折叠组件
+                data-toggle="collapse" 用来初始化折叠组件
+                data-target="#bs-example-navbar-collapse-1" 指定控制的是那个标签
+            -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--商标区块-->
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!--导航条内容-->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<!-- bootstrap基于jquery 得先引入jquery -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<!--bootstrap核心js文件 -->
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

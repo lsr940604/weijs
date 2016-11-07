@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>媒体查询</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            /*固定宽度且居中*/
+            width: 1200px;
+            margin: 0 auto;
+            background: purple;
+            height: 1000px;
+        }
+
+        /*CSS3中的Media Query（媒介查询）*/
+
+        /*1.  在超小屏设备  宽度100%  背景颜色是红色*/
+        /*0px - 768px*/
+        @media screen and (max-width: 768px){
+            .container{
+                width: 100%;
+                background: red;
+            }
+        }
+        /*2.  在小屏设备当中  宽度是 750px  背景颜色是蓝色*/
+        /*768px-992px*/
+        @media screen and (min-width: 768px) and (max-width: 992px){
+            .container{
+                width: 750px;
+                background: blue;
+            }
+        }
+        /*3.  在中屏设备当中  宽度是 970px  背景颜色是粉色*/
+        /*992px - 1200px*/
+        @media screen and (min-width: 992px) and (max-width: 1200px){
+            .container{
+                width: 970px;
+                background: pink;
+            }
+        }
+
+        /* 4.  在宽屏设备当中  宽度是 1170px  背景颜色是黄色*/
+        @media screen and (min-width: 1200px){
+            .container{
+                width: 1170px;
+                background: yellow;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <!--
+        1.  在超小屏设备  宽度100%  背景颜色是红色
+        2.  在小屏设备当中  宽度是 750px  背景颜色是蓝色
+        3.  在中屏设备当中  宽度是 970px  背景颜色是粉色
+        4.  在宽屏设备当中  宽度是 1170px  背景颜色是黄色
+    -->
+
+    <!--响应式布局容器-->
+    <div class="container">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*div{
+            color: red;
+        }*/
+
+        /*选择下一个紧邻的div*/
+        /*.first + div{
+            color: red;
+        }*/
+
+        /*每一个div的下一个*/
+        /*div + div{
+            color: red;
+        }*/
+
+        /*选择下面所有的同级div*/
+        .second ~ div{
+            color: red;
+        }
+
+        div ~ div{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>1</div>
+    <div class="second">2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+</body>
+</html>
